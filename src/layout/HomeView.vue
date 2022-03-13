@@ -4,14 +4,17 @@
       <el-aside class="aside">
         <asideTemplate />
       </el-aside>
-      <el-container>
-        <el-header>
+      <div>
+        <div>
           <headerTemplate />
-        </el-header>
+        </div>
         <el-main>
           <router-view></router-view>
         </el-main>
-      </el-container>
+      </div>
+     <el-aside >
+        <asideTemplate />
+      </el-aside>
     </el-container>
   </div>
 </template>
