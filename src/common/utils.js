@@ -24,3 +24,36 @@ function filterFn(arr, fn) {
 filterFn(test, function (item) {
     return item > 2;
 });
+/* map */
+function mapFn(arr, fn) {
+    var result = [];
+    for (var i = 0; i < arr.length; i++) {
+        result.push(fn(arr[i]));
+    }
+    console.log(result, 'mapp');
+    return result;
+}
+mapFn(test, function (item) {
+    return item;
+});
+/*  纯函数
+ 相同的输入都有相同的输出 slice 不会改变原来的数组     不纯数组  splice  会修改原数组
+ 调用函数每次返回都不一样
+loadsh 基本都是纯函数 */ 
+
+// 函数柯里化
+function curried(func){
+    return function  fn(...argus){
+        if(func.length  > argus){
+            return function(){
+                fn(...argus.concat(Array.from(arguments)))
+            }
+        }
+        return func(...arguments)
+    }
+      
+  }
+
+
+
+  

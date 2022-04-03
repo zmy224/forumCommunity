@@ -30,3 +30,23 @@ function filterFn(arr:number[],fn:Function){
 filterFn(test,function(item:number){
  return  item > 2
 })
+
+/* map */
+function mapFn(arr:number[],fn:Function){
+    let result=[];
+    for(let i= 0;i< arr.length;i++){
+         result.push(fn(arr[i]));
+     }
+     console.log(result,'mapp');
+     return result
+}
+
+mapFn(test,function(item:number){
+    return item
+})
+
+/*  纯函数     
+ 都有输入项 和输出项 相同的输入都有相同的输出 slice 不会改变原来的数组     不纯数组  splice  会修改原数组
+ 调用函数每次返回都不一样
+loadsh 基本都是纯函数 */
+
